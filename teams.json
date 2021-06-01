@@ -6,7 +6,7 @@
 			"repos": ["newrelic-ruby-agent"]        
 		},
 		{
-			"name": "Node",
+			"name": "Dotnet",
 			"team-slug": "dotnet-agent",
 			"repos": ["newrelic-dotnet-agent", "newrelic-logenricher-dotnet"]
 		}
