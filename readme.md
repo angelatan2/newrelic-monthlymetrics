@@ -6,7 +6,7 @@ Script to gather metrics about how the teams are functioning and how the communi
 `export GITHUB_TOKEN='your_token'`
 
 2. Configure your teams in the teams.json file
-3. run the script using `python3 metrics.py`
+3. Run the script using `python3 metrics.py`
 
 This script makes the following assumptions
 
