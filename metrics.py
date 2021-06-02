@@ -24,7 +24,7 @@ def getTeamMembers(team_slug):
 	memberlist = []
 	query_url = "https://api.github.com/orgs/newrelic/teams"
 	params = {
-		"per_page": 100,
+		"per_page": 200,
 	}
 
 	headers = {'Authorization': f'token {token}'}
@@ -35,8 +35,8 @@ def getTeamMembers(team_slug):
 			query_url = i['members_url'].replace('{/member}','')
 			teammembers = requests.get(query_url, headers=headers, params=params)
 			for m in teammembers.json():
+				print(m['login'])
 				memberlist.append(m['login'])
-	print("getTeamMember method - END")
 	return memberlist
 
 
