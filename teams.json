@@ -7,7 +7,7 @@
 		},
 		{
 			"name": "Dotnet",
-			"team-slug": "dotnet-agent",
+			"team-slug": "Dotnet",
 			"repos": ["newrelic-dotnet-agent", "newrelic-logenricher-dotnet"]
 		}
 	]

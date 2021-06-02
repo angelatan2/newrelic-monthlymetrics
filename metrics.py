@@ -20,20 +20,23 @@ def getReposFromProject():
 	return node
 
 def getTeamMembers(team_slug):
+	print("getTeamMember method")
 	memberlist = []
 	query_url = "https://api.github.com/orgs/newrelic/teams"
 	params = {
 		"per_page": 100,
 	}
+
 	headers = {'Authorization': f'token {token}'}
 	r = requests.get(query_url, headers=headers, params=params)
+	print(r)
 	for i in r.json():
 		if i['slug'] == team_slug:
 			query_url = i['members_url'].replace('{/member}','')
 			teammembers = requests.get(query_url, headers=headers, params=params)
 			for m in teammembers.json():
 				memberlist.append(m['login'])
-
+	print("getTeamMember method - END")
 	return memberlist
 
 
